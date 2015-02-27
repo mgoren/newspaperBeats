@@ -4,7 +4,7 @@ app.factory('BeatsFactory', function BeatsFactory() {
   factory.beats = [];
 
   factory.addBeat = function() {
-    factory.beats.push({ name: factory.beatName, id: factory.beats.length + 1, reporters: [] });
+    factory.beats.push({ name: factory.beatName, id: factory.beats.length + 1, reporterIDs: [] });
     factory.beatName = null;
   };
   
