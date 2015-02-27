@@ -1,8 +1,10 @@
 app.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams, ReportersFactory, BeatsFactory, UtilitiesFactory) {
+  $scope.UtilitiesFactory = UtilitiesFactory;
   $scope.ReportersFactory = ReportersFactory;
-  $scope.reporters = ReportersFactory.reporters;
   $scope.BeatsFactory = BeatsFactory;
+  $scope.reporters = ReportersFactory.reporters;
   $scope.beat = UtilitiesFactory.findById(BeatsFactory.beats, $stateParams.beatID)
+
 
   $scope.addReporter = function() {
     $scope.beat.reporterIDs.push($scope.reporters.length + 1)
