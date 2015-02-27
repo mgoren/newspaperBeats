@@ -18,6 +18,4 @@ app.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams, Rep
     return UtilitiesFactory.findById($scope.reporters, reporterID);
   }
 
-  $scope.debug = function() {debugger;};
-
 });

@@ -4,18 +4,13 @@ app.config(function($stateProvider) {
 
   $stateProvider.state('home', {
     url: "",
-    templateUrl: "partials/home.html"
-  });
-
-  $stateProvider.state('beats', {
-    url: "/beats",
-    templateUrl: "partials/beats.html",
+    templateUrl: "partials/home.html",
     controller: 'BeatsCtrl'
   });
 
-  $stateProvider.state('beats.reporters', {
+  $stateProvider.state('home.reporters', {
     url: "/:beatID",
-    templateUrl: "partials/beats.reporters.html",
+    templateUrl: "partials/home.reporters.html",
     controller: 'ReportersCtrl'
   });
 

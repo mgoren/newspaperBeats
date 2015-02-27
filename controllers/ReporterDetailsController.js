@@ -4,6 +4,4 @@ app.controller('ReporterDetailsCtrl', function ReporterDetailsCtrl($scope, $stat
   $scope.BeatsFactory = BeatsFactory;
   $scope.reporter = UtilitiesFactory.findById(ReportersFactory.reporters, $stateParams.reporterID)
 
-  $scope.debug = function() {debugger;};
-
 });

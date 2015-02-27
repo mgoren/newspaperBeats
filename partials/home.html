@@ -1,1 +1,30 @@
-<h3><a ui-sref="beats">Click here to view all beats</a></h3>
+<div ng-show="beats.length">
+  <h4>Search Beats</h4>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <input ng-model="query" type="text" class="form-control" placeholder="Search">
+    </div>
+  </form>
+</div>
+
+<div ng-show="beats.length">
+  <h2 ng-show="beats.length && filtered.length">Beats List</h2>
+  <h2 ng-show="beats.length && !filtered.length">No Matches</h2>
+  <ul>
+    <li ng-repeat="item in filtered = (beats | filter:query)">
+      <a ng-click="beats.editing=true" ui-sref="home.reporters({ beatID: item.id })">{{ item.name }}</a>
+    </li>
+  </ul>
+</div>
+
+<div ng-hide="beats.editing">
+  <h3>Add a new beat</h3>
+  <form ng-submit="BeatsFactory.addBeat()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="BeatsFactory.beatName" class="form-control" placeholder="Enter a beat name">
+    </div>
+    <button type="submit" class="btn btn-default btn-sm">Submit</button>
+  </form>
+</div>
+
+<div ui-view></div>
