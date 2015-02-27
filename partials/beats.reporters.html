@@ -4,7 +4,7 @@
   <h3>Reporter List for {{ beat.name }}</h3>
   <ul>
     <li ng-repeat="item in beat.reporterIDs">
-      {{ reporterById(item).name }}
+      <a ng-click="reporters.editing=true" ui-sref="reporters({ reporterID: item })">{{ reporterById(item).name }}</a>
     </li>
   </ul>
 </div>

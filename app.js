@@ -18,5 +18,11 @@ app.config(function($stateProvider) {
     templateUrl: "partials/beats.reporters.html",
     controller: 'ReportersCtrl'
   });
+
+  $stateProvider.state('reporters', {
+    url: "/reporters/:reporterID",
+    templateUrl: "partials/reporters.html",
+    controller: 'ReporterDetailsCtrl'
+  });
   
 });
