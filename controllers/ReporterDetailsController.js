@@ -3,5 +3,5 @@ app.controller('ReporterDetailsCtrl', function ReporterDetailsCtrl($scope, $stat
   $scope.ReportersFactory = ReportersFactory;
   $scope.BeatsFactory = BeatsFactory;
   $scope.reporter = UtilitiesFactory.findById(ReportersFactory.reporters, $stateParams.reporterID)
-
+  $scope.activate = UtilitiesFactory.activate;
 });

@@ -12,12 +12,19 @@
     <script src="controllers/BeatsController.js"></script>
     <script src="controllers/ReportersController.js"></script>
     <script src="controllers/ReporterDetailsController.js"></script>
+    <script src="controllers/NavController.js"></script>
     <script src="//use.edgefonts.net/unifrakturmaguntia.js"></script>
     <link rel="stylesheet" href="css/bootstrap-paper.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1 class="jumbotron"><span id="title">The Daily Me</span> <small>&lt;administration&gt;</small></h1>
+    <div class="jumbotron">
+      <h1>The Daily Me <small>&lt;administration&gt;</small></h1>
+        <ul class="nav nav-tabs" ng-controller="NavCtrl">
+          <li ng-click="activate('beats')" ng-class="{ active: UtilitiesFactory.active ==='beats' } "><a ui-sref="home">Beats</a></li>
+          <li ng-click="activate('reporters')" ng-class="{ active: UtilitiesFactory.active ==='reporters' }"><a ui-sref="reporters">Reporters</a></li>
+        </ul>
+    </div>
     <div class="container">
       <div ui-view></div>
     </div>

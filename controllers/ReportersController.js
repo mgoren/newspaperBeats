@@ -4,6 +4,7 @@ app.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams, Rep
   $scope.BeatsFactory = BeatsFactory;
   $scope.reporters = ReportersFactory.reporters;
   $scope.beat = UtilitiesFactory.findById(BeatsFactory.beats, $stateParams.beatID)
+  $scope.activate = UtilitiesFactory.activate;
 
 
   $scope.addReporter = function() {
