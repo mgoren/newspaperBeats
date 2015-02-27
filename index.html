@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="Beats">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Daily Me</title>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="services/UtilitiesFactory.js"></script>
+    <script src="services/BeatsFactory.js"></script>
+    <script src="controllers/BeatsController.js"></script>
+    <script src="controllers/ReportersController.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-paper.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Daily Me</h1>
+      <div ui-view></div>
+    </div>
+  </body>
+</html>
