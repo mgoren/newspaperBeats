@@ -1,10 +1,10 @@
 <a class="btn" ng-click="debug()">debugger</a>
 
-<div ng-show="beat.reporters.length">
+<div ng-show="beat.reporterIDs.length">
   <h3>Reporter List for {{ beat.name }}</h3>
   <ul>
-    <li ng-repeat="item in beat.reporters">
-      {{ item.name }}
+    <li ng-repeat="item in beat.reporterIDs">
+      {{ reporterById(item).name }}
     </li>
   </ul>
 </div>
