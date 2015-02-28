@@ -8,15 +8,21 @@ app.config(function($stateProvider) {
     controller: 'BeatsCtrl'
   });
 
+  $stateProvider.state('reporters', {
+    url: "/reporters",
+    templateUrl: "partials/reporters.html",
+    controller: 'ReportersCtrl'
+  });
+
   $stateProvider.state('home.reporters', {
     url: "/:beatID",
     templateUrl: "partials/home.reporters.html",
     controller: 'ReportersCtrl'
   });
 
-  $stateProvider.state('reporters', {
+  $stateProvider.state('reporter-details', {
     url: "/reporters/:reporterID",
-    templateUrl: "partials/reporters.html",
+    templateUrl: "partials/reporter-details.html",
     controller: 'ReporterDetailsCtrl'
   });
   

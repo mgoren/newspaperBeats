@@ -2,7 +2,7 @@
   <h3>Reporter List for {{ beat.name }}</h3>
   <ul>
     <li ng-repeat="item in beat.reporterIDs">
-      <a ng-click="beats.editing=false; activate('reporters');" ng-click="reporters.editing=true" ui-sref="reporters({ reporterID: item })">{{ reporterById(item).name }}</a>
+      <a ng-click="beats.editing=false; activate('reporters');" ng-click="reporters.editing=true" ui-sref="reporter-details({ reporterID: item })">{{ reporterById(item).name }}</a>
     </li>
   </ul>
 </div>

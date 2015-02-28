@@ -1,6 +1,18 @@
-<h3>{{ reporter.name }}</h3>
-<p>Years at desk: {{ reporter.years }}</p>
-<p>Birthday: {{ reporter.bday }}</p>
+<div ng-show="reporters.length">
+  <h4>Search Reporters</h4>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <input ng-model="query" type="text" class="form-control" placeholder="Search">
+    </div>
+  </form>
+</div>
 
-<hr>
-<a ng-click="beats.editing=false; activate('beats');" ui-sref="home" class="btn btn-default btn-sm">Home</a>
+<div ng-show="reporters.length">
+  <h2 ng-show="reporters.length && filtered.length">Reporters List</h2>
+  <h2 ng-show="reporters.length && !filtered.length">No Matches</h2>
+  <ul>
+    <li ng-repeat="item in filtered = (reporters | filter:query)">
+      <a ng-click="reporters.editing=true" ui-sref="reporter-details({ reporterID: item.id })">{{ item.name }}</a>
+    </li>
+  </ul>
+</div>
