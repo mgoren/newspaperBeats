@@ -6,7 +6,6 @@ app.controller('ReporterDetailsCtrl', function ReporterDetailsCtrl($scope, $stat
   $scope.activate = UtilitiesFactory.activate;
 
   $scope.beat = function(reporter) {
-    debugger;
     return UtilitiesFactory.findById($scope.BeatsFactory.beats, reporter.beatID);
   };
 

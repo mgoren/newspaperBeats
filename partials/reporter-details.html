@@ -1,6 +1,8 @@
-<h2>{{ reporter.name }} <small>{{ beat(reporter).name }}</small></h2>
-<p>Years at desk: {{ reporter.years }}</p>
-<p>Birthday: {{ reporter.bday }}</p>
+<div class="well">
+  <h2>{{ reporter.name }} <small>{{ beat(reporter).name }}</small></h2>
+  <p>Years at desk: {{ reporter.years }}</p>
+  <p>Birthday: {{ reporter.bday }}</p>
+</div>
 
 <hr>
 <a ng-click="beats.editing=false" ui-sref="reporters" class="btn btn-default btn-sm">All Reporters</a>
