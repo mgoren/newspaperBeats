@@ -1,3 +1,8 @@
+<div ng-show="!reporters.length">
+  <h2>No Reporters</h2>
+  <h3>(Add reporters through beats.)</h3>
+</div>
+
 <div ng-show="reporters.length">
   <h4>Search Reporters</h4>
   <form class="form-inline" role="form">
@@ -7,7 +12,7 @@
   </form>
 </div>
 
-<div ng-show="reporters.length">
+<div ng-show="reporters.length" class="well">
   <h2 ng-show="reporters.length && filtered.length">Reporters List</h2>
   <h2 ng-show="reporters.length && !filtered.length">No Matches</h2>
   <ul>
