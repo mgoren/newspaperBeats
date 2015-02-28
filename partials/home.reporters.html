@@ -1,3 +1,5 @@
+<hr>
+
 <div ng-show="beat.reporterIDs.length">
   <h3>Reporter List for {{ beat.name }}</h3>
   <ul>
@@ -6,6 +8,8 @@
     </li>
   </ul>
 </div>
+
+<hr>
 
 <div ng-show="beats.editing">
   <h4>Add a reporter to {{ beat.name }}</h4>
@@ -22,6 +26,3 @@
     <button type="submit" class="btn btn-default btn-sm">Add</button>
   </form>
 </div>
-
-<hr>
-<a ng-click="beats.editing=false" ui-sref="home" class="btn btn-default btn-sm">Home</a>
