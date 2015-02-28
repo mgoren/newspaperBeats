@@ -9,7 +9,7 @@ app.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams, Rep
 
   $scope.addReporter = function() {
     $scope.beat.reporterIDs.push($scope.reporters.length + 1)
-    $scope.reporters.push({ name: $scope.reporterName, years: $scope.reporterYears, bday: $scope.reporterBday, id: $scope.reporters.length + 1 });
+    $scope.reporters.push({ name: $scope.reporterName, years: $scope.reporterYears, bday: $scope.reporterBday, id: $scope.reporters.length + 1, beatID: $scope.beat.id });
     $scope.reporterName = null;
     $scope.reporterYears = null;
     $scope.reporterBday = null;
@@ -17,6 +17,6 @@ app.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams, Rep
 
   $scope.reporterById = function(reporterID) {
     return UtilitiesFactory.findById($scope.reporters, reporterID);
-  }
+  };
 
 });
